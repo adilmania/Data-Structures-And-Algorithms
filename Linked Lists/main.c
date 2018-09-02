@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
         printf("\n Display an empty linked list \n");
         Display_List(mylist);
 
-        /* Remplissage de la liste chaînée depuis la matrice puis affichage de la liste chaînée */
+        /* Converting Matrix to Linked List, then display the linked list */
         Insert_Matrix(mylist, matrix, m, n, K);
         printf("\n Display a linked list after an add \n");
         Display_List(mylist);
 
         /* Delete some occurrences then display the linked list */
         Delete_Occurence(mylist, 0);
-        printf("\n Display a linked list after deleting of all factory 0 all occurrences \n");
+        printf("\n Display a linked list after deleting of all factory 0 occurrences \n");
         Display_List(mylist);
 
         /* Saving the linked list in a file */
