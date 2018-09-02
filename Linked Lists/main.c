@@ -1,6 +1,6 @@
 #include "./Headers/Matrix.h"
-#include "./Headers/List_CH.h"
-#include "./Headers/Suppr.h"
+#include "./Headers/Linked_List.h"
+#include "./Headers/Delete.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,11 +14,12 @@ int main(int argc, char *argv[])
         Scanner myscanner;
 
         /* Initializing the linked cost list */
-        Liste *mylist = Initialisation();
-        /* La lecture de la matrice des coûts à partir d'un fichier */
-        myscanner = Lecture_Initialisation_Remplissage_Matrice(argv[1], mat, m, n, myscanner);
+        List *mylist = Initialisation();
 
-        mat = myscanner.mat;
+        /* Reading the cost matrix from a file */
+        myscanner = ReadInitFillMatrix(argv[1], matrix, m, n, myscanner);
+
+        matrix = myscanner.matrix;
         m = myscanner.m;
         n = myscanner.n;
 
@@ -27,22 +28,22 @@ int main(int argc, char *argv[])
         Display_List(mylist);
 
         /* Remplissage de la liste chaînée depuis la matrice puis affichage de la liste chaînée */
-        Insert_Matrix(mylist, mat, m, n, K);
+        Insert_Matrix(mylist, matrix, m, n, K);
         printf("\n Display a linked list after an add \n");
         Display_List(mylist);
 
-        /* Suppression de quelques occurences then display the linked list */
-        Suppression_Occurencet(mylist, 0);
-        printf("\n Display a linked list after deleting of the 0 Affichage de la liste chaînée après une suppression d'occurences de l'usine 0 \n");
+        /* Delete some occurrences then display the linked list */
+        Delete_Occurence(mylist, 0);
+        printf("\n Display a linked list after deleting of all factory 0 all occurrences \n");
         Display_List(mylist);
 
-        /* Sauvegarde de la liste chaînée dans un fichier */
+        /* Saving the linked list in a file */
         File_Save(mylist, "Tests/file_res.txt");
     }
     else
     {
 
-        printf("Veuillez entrer le bon nombre d'arguments!\n");
+        printf("Please enter all arguments!\n");
     }
     return 0;
 }
