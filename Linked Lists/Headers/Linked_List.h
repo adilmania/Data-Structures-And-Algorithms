@@ -9,38 +9,38 @@
 typedef struct Node Node;
 struct Node
 {
-    int indice_colonne; /* Indice de la column */
-    int indice_ligne;   /* Indice de la ligne */
+    int indice_colonne; /* Column index */
+    int indice_ligne;   /* Line index */
     int Cout;           /* Value */
-    Node *next;         /* Pointeur on next node */
+    Node *next;         /* Pointer on next node */
 };
 
 /* Declaration of a linked list type */
 typedef struct List List;
 struct List
 {
-    Node *first; /* Pointeurs sur le premier élément de la list */
+    Node *first; /* Pointer on the first node of the list */
 };
 
-/* Fonction qui Initialise une list chaînée */
+/* Initilisation Function */
 
 List *Initialisation();
 
-/* Fonction qui Insère dans une liste chaînée */
+/* Linked List Insertion Function */
 
-void Bloc_Insertion(List *list, double **mat, int i, int j, Node *prec, Node *cour);
-void Sorted_Insertion(List *list, double **mat, int i, int j);
-void Matrix_Insertion(List *list, double **mat, int m, int n, int K);
+void Bloc_Insertion(List *list, double **matrix, int i, int j, Node *prec, Node *cour);
+void Sorted_Insertion(List *list, double **matrix, int i, int j);
+void Matrix_Insertion(List *list, double **matrix, int m, int n, int K);
 
-/* Fonction qui supprime un le premier élément de la liste chaînée */
+/* First Linked List Node Delete Function */
 
 void Delete_First_Node(List *list);
 
-/* Fonction qui Affiche une liste chaînée */
+/* Display Linked List Function */
 
 void Display_List(List *list);
 
-/* Fonction qui libère la liste chaînée */
+/* Free Linked List Function */
 
 void Free_List(List *list);
 

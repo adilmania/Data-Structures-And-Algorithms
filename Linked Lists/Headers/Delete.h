@@ -6,16 +6,16 @@
 #include <string.h>
 #include "../Headers/Linked_List.h"
 
-/* Fonction qui supprime les occurences d'une usine u dans la liste chaînée */
+/* Delete the "u" factory occurrences then display the linked list */
 
-void Suppression_Occurences(Liste *liste, int u);
+void Delete_Occurence(List *list, int u);
 
-/* Fonction qui supprime un élément de la liste chaînée à partir d'un pointeur courant et d'un pointeur précédent */
+/* Node Delete Function */
 
-void Suppression_Element(Liste *liste, Element *pt_prec, Element *pt_cour);
+void Delete_Node(List *list, Node *pt_prec, Node *pt_cour);
 
-/* Fonction qui supprime un élément de la liste chaînée à partir d'un pointeur courant et d'un pointeur précédent */
+/* Linked list File Saving Function */
 
-void Sauver_Dans_Un_Fichier(Liste *liste, char *fichier);
+void File_Save(List *list, char *file);
 
 #endif

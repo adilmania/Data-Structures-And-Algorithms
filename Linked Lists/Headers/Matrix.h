@@ -5,22 +5,22 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Structure des informations à scanner depuis le fichier */
+/* Data to scan from a file structure */
 
 typedef struct Scanner Scanner;
 struct Scanner
 {
-    double **mat; /* Pointeur sur la matrice */
-    int m;        /* Nombres de lignes */
-    int n;        /* Nombres de colonnes */
+    double **matrix; /* Pointer on the matrix */
+    int m;           /* Number of lines */
+    int n;           /* Number of columns */
 };
 
-/* Fonction qui lit un fichier, initialise une matrice et la remplit à partir des données du fichier */
+/* Reading, Initialising, Filling Matrix Function */
 
-Scanner Lecture_Initialisation_Remplissage_Matrice(char *fichier, double **mat, int m, int n, Scanner monscanner);
+Scanner ReadInitFillMatrix(char *file, double **matrix, int m, int n, Scanner monscanner);
 
-/* Fonction d'Affichage de la matrice */
+/* Matrix Diplay Function */
 
-void Display_Matrix(double **mat, int m, int n);
+void Display_Matrix(double **matrix, int m, int n);
 
 #endif
