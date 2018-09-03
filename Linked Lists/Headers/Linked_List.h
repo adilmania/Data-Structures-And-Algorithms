@@ -11,7 +11,7 @@ struct Node
 {
     int indice_colonne; /* Column index */
     int indice_ligne;   /* Line index */
-    int Cout;           /* Value */
+    int Cout;           /* Cost */
     Node *next;         /* Pointer on next node */
 };
 
